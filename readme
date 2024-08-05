@@ -1,0 +1,36 @@
+Análise de Filmes
+Introdução
+Este projeto visa realizar uma análise exploratória de dados de filmes, utilizando Python para gerar gráficos que visualizam informações importantes sobre filmes, como notas, gêneros, arrecadações, e muito mais. O objetivo é fornecer insights sobre tendências e padrões na indústria cinematográfica.
+
+Objetivos do Projeto
+Visualização de Dados: Criar gráficos que apresentem visualmente as tendências de dados de filmes.
+Análise de Gêneros: Explorar a popularidade e a distribuição de diferentes gêneros de filmes.
+Análise de Classificação: Avaliar a distribuição das notas dos filmes.
+Análise de Arrecadação: Investigar a relação entre orçamento e arrecadação.
+Conjunto de Dados
+O conjunto de dados pode incluir informações como:
+
+Título do filme
+Ano de lançamento
+Gênero
+Avaliação (nota)
+Orçamento
+Arrecadação
+Duração
+Esses dados podem ser coletados de várias fontes, como bancos de dados online ou arquivos CSV fornecidos.
+
+Metodologia
+Carregamento dos Dados:
+
+Carregar o conjunto de dados em um dataframe do pandas.
+Verificar e tratar valores ausentes ou inconsistências nos dados.
+Visualizações Gráficas:
+
+Histograma de Notas dos Filmes: Mostrar a distribuição das notas dos filmes.
+Gráfico de Barras de Gêneros: Visualizar a popularidade dos gêneros de filmes.
+Gráfico de Dispersão de Orçamento vs. Arrecadação: Mostrar a relação entre orçamento e arrecadação dos filmes.
+Boxplot de Arrecadação por Gênero: Comparar a arrecadação entre diferentes gêneros de filmes.
+Análise dos Resultados:
+
+Analisar as visualizações para identificar tendências e padrões.
+Fornecer insights baseados nos gráficos gerados.
