@@ -1,0 +1,47 @@
+import gdown
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Extrair o ID do arquivo do link
+file_id = '1IZQJlYMqLDyrPyxAsBNmzDzp1c6buFto'
+
+# URL de download do arquivo CSV
+url = f'https://drive.google.com/uc?id={file_id}'
+
+# Nome do arquivo de saída
+output_file = 'movies.csv'
+
+# Baixar o arquivo
+gdown.download(url, output_file, quiet=False)
+
+# Carregar o arquivo CSV em um DataFrame
+df = pd.read_csv(output_file)
+
+# Análise exploratória de dados
+print("Primeiras linhas do DataFrame:")
+print(df.head())
+
+print("\nInformações sobre o DataFrame:")
+print(df.info())
+
+print("\nEstatísticas descritivas das variáveis numéricas:")
+print(df.describe())
+
+# Histograma
+df.hist(figsize=(10, 8))
+plt.suptitle('Histograma das variáveis numéricas')
+plt.show()
+
+# Gráfico de Dispersão
+# Vamos supor que 'num_col1' e 'num_col2' são colunas numéricas presentes no DataFrame
+if 'num_col1' in df.columns and 'num_col2' in df.columns:
+    df.plot(kind='scatter', x='num_col1', y='num_col2', alpha=0.5)
+    plt.title('Gráfico de Dispersão entre num_col1 e num_col2')
+    plt.show()
+
+# Gráfico de Barras
+# Vamos supor que 'category_column' é uma coluna categórica presente no DataFrame
+if 'category_column' in df.columns:
+    df['category_column'].value_counts().plot(kind='bar', figsize=(10, 6))
+    plt.title('Gráfico de Barras da coluna category_column')
+    plt.show()
